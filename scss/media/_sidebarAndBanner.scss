@@ -1,70 +1,20 @@
 @media (max-width:1720px) {
   .sidebarAndBanner{
-    width: 100%;
     &_wrapper{
-      margin: 40px 0 0;
-      width: 100%;
-      display: flex;
       &_sidebar{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         &_category{
-          display: flex;
-          align-items: center;
-          gap: 60px;
+          gap: 45px;
           &_div{
             width: 50px;
-          }
-          &_title{
-            text-decoration:none;
-            transition: 0.5s;
-          }
-          &_title:hover{
-            color: #ff4646;
-            transition: 0.5s;
           }
         }
       }
       &_banner{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 35px;
-        &_exampleimg1{
-          width: 100%;
-          grid-column: 1 / 2;
-        }
-        &_exampleimg2{
-          width: 100%;
-          grid-column: 3 / 4;
-        }
+       gap: 30px;
         &_example{
-          width: 100%;
-          grid-column: 2 / 3;
-          display: flex;
-          flex-direction: column;
-          gap: 35px;
-          img{
-            width: 100%;
-          }
+          gap: 25px;
           &_text{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             gap: 25px;
-            &_ULTIMATE{
-              letter-spacing: -0.04em;
-              text-align: center;
-              color: #484848;
-            }
-            &_SALE{
-              line-height: 100%;
-              letter-spacing: -0.06em;
-              text-align: center;
-              -webkit-text-stroke: 1px #484848; /* Параметры контура */
-              color: transparent;
-            }
             &_btn{
               width: 75%;
             }
@@ -73,24 +23,175 @@
       }
     }
   }
-
-
 }
 @media (max-width:1600px) {
-
+  .sidebarAndBanner{
+    &_wrapper{
+      gap: 10px;
+      &_sidebar{
+        &_category{
+          gap: 30px;
+          &_div{
+            width: 50px;
+          }
+        }
+      }
+      &_banner{
+        gap: 25px;
+        &_example{
+          gap: 25px;
+          &_text{
+            gap: 25px;
+            &_btn{
+              width: 75%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (max-width:1440px) {
-
+  .sidebarAndBanner{
+    &_wrapper{
+      gap: 20px;
+      &_sidebar{
+        &_category{
+          gap: 20px;
+          &_div{
+            width: 40px;
+          }
+        }
+      }
+      &_banner{
+        gap: 15px;
+        &_example{
+          gap: 25px;
+          &_text{
+            gap: 25px;
+            &_btn{
+              width: 75%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (max-width: 1200px) {
-
+  .sidebarAndBanner{
+    &_wrapper{
+      gap: 5px;
+      display: grid;
+      grid-template-columns: 21% auto;
+      &_sidebar{
+        &_category{
+          gap: 20px;
+          &_div{
+            width: 40px;
+            img{
+              width: 40px;
+              height: 50px;
+            }
+          }
+        }
+      }
+      &_banner{
+        gap: 10px;
+        &_example{
+          gap: 25px;
+          &_text{
+            gap: 25px;
+            &_btn{
+              width: 75%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (max-width: 992px) {
-
+  .sidebarAndBanner{
+    &_wrapper{
+      gap: 5px;
+      display: flex;
+      &_sidebar{
+        display: none;
+      }
+      &_banner{
+        gap: 10px;
+        &_example{
+          gap: 25px;
+          &_text{
+            gap: 25px;
+            &_btn{
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (max-width: 768px) {
-
+  .sidebarAndBanner{
+    &_wrapper{
+      gap: 5px;
+      display: flex;
+      &_sidebar{
+        display: none;
+      }
+      &_banner{
+        gap: 10px;
+        &_example{
+          gap: 15px;
+          &_text{
+            gap: 15px;
+            &_btn{
+              width: 75%;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (max-width: 480px) {
-
+  .sidebarAndBanner{
+    &_wrapper{
+      gap: 15px;
+      flex-direction: column;
+      &_banner{
+        &_exampleimg1{
+          border-radius: 10px;
+        }
+        &_exampleimg2{
+          border-radius: 10px;
+        }
+        &_example{
+          gap: 8px;
+          &_textimg1{
+            border-radius: 10px;
+          }
+          &_textimg2{
+            border-radius: 10px;
+          }
+          &_text{
+            gap: 5px;
+            &_NEW{
+              font-size: 10px;
+            }
+            &_btn{
+              display: none;
+            }
+            &_btnDop{
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
 }
