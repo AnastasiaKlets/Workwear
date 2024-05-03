@@ -1,0 +1,17 @@
+.video{
+  &_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    &_title{
+      font-size: 300px;
+      line-height: 100%;
+      letter-spacing: -0.06em;
+      text-align: center;
+      -webkit-text-stroke: 1.5px #484848;
+      color: transparent;
+    }
+  }
+}
