@@ -1,0 +1,75 @@
+.sidebarAndBanner{
+  width: 100%;
+  &_wrapper{
+    margin: 40px 0 0;
+    width: 100%;
+    display: flex;
+    &_sidebar{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &_category{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        &_div{
+          width: 50px;
+        }
+        &_title{
+          text-decoration:none;
+          transition: 0.5s;
+        }
+        &_title:hover{
+          color: #ff4646;
+          transition: 0.5s;
+        }
+      }
+    }
+    &_banner{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+      &_exampleimg1{
+        width: 100%;
+        grid-column: 1 / 2;
+      }
+      &_exampleimg2{
+        width: 100%;
+        grid-column: 3 / 4;
+      }
+      &_example{
+        width: 100%;
+        grid-column: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        img{
+          width: 100%;
+        }
+        &_text{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 25px;
+          &_ULTIMATE{
+            letter-spacing: -0.04em;
+            text-align: center;
+            color: #484848;
+          }
+          &_SALE{
+            line-height: 100%;
+            letter-spacing: -0.06em;
+            text-align: center;
+            -webkit-text-stroke: 1px #484848; /* Параметры контура */
+            color: transparent;
+          }
+          &_btn{
+            width: 75%;
+          }
+      }
+    }
+  }
+}
+}
+
