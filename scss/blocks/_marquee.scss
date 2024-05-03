@@ -1,0 +1,26 @@
+.marquee{
+  box-shadow: 0 0 52px 0 rgba(68, 68, 68, 0.2);
+  background: #fff;
+  border-radius: 5px;
+  height: 200px;
+
+  &_wrapper{
+    margin: 100px 0 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &_block{
+      img{
+        height: 100px;
+        margin: 0 70px 0 0;
+        filter: grayscale(100%);
+        transition: 1s;
+      }
+      img:hover{
+        filter: grayscale(0%);
+        transition: 1s;
+      }
+    }
+  }
+}
