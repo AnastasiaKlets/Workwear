@@ -1,0 +1,59 @@
+
+@media (max-width: 992px) {
+  .contact{
+    margin-top: 20px;
+    &_wrapper{
+      gap: 20px;
+      width: 100%;
+      &_inf{
+        gap: 30px;
+        width: 100%;
+        &_cards{
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          &_card{
+            background: #f3f5f7;
+            padding: 16px 15px;
+            gap: 8px;
+          }
+        }
+        &_inputs{
+          &_form{
+            gap: 24px;
+            button{
+              width: 100%;
+              height: 40px;
+            }
+            &_inf{
+              width: 100%;
+              gap: 12px;
+              input{
+                border: 1px solid #cbcbcb;
+                border-radius: 6px;
+                padding: 0 16px;
+                height: 40px;
+              }
+            }
+          }
+        }
+      }
+      &_map{
+        display: none;
+        &_dop{
+          display: inline;
+          iframe{
+            width: 100%;
+
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}
