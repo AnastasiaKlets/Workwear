@@ -1,0 +1,25 @@
+
+@media (max-width: 992px) {
+  .textInf{
+    padding: 20px 0;
+    &_wrapper{
+      gap: 70px;
+      &_text{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+      }
+      &_blocks{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 50px;
+        width: 100%;
+        span{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
