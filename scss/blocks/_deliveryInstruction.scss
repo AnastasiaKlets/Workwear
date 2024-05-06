@@ -1,0 +1,39 @@
+.deliveryInstruction{
+  margin-top: 55px;
+  background: linear-gradient(180deg, #f6f6f6 0%, #fafafa 100%);
+  &_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 20px 0 60px 0 ;
+    &_variants{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      &_variant{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        &_line{
+          border-radius: 5px;
+          width: 5px;
+          height: 165px;
+          background: #ff4646;
+        }
+        &_text{
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          &_inf{
+            display: flex;
+            flex-direction: column;
+          }
+          &_title{
+            display: flex;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}
