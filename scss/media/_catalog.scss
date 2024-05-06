@@ -1,0 +1,53 @@
+.catalog{
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 20% 78%;
+    justify-items: stretch;
+    justify-content: space-evenly;
+    &_sidebar{
+      justify-content: flex-start;
+      gap: 25px;
+    }
+    &_categories{
+      padding-top: 0;
+      &_tab{
+        margin-top:0;
+        &_content{
+          display: grid;
+          grid-template-columns: 33.33% 33.33% 33.33%;
+          gap: 36px 0;
+          justify-items: end;
+        }
+        &_row{
+          width: calc(90% - 50px);
+        }
+      }
+      &_filters{
+        &_find{
+          form {
+            width: 300px;
+            height: 50px;
+            display: flex;
+            margin: 0 auto;
+          }
+          input.search {
+            padding: 5px 5px 5px 40px;
+            border: 1px solid #ccc;
+            width: 693px;
+            height: 48px;
+            background: url(../../icons/catalog/Button.svg) no-repeat 3px 1px;
+            background-size: auto 90%;
+          }
+          input::placeholder{
+            font-family: Roboto-Regular, serif;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 1.1;
+            color: #111;
+
+          }
+        }
+      }
+    }
+  }
+}
