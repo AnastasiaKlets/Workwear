@@ -1,0 +1,54 @@
+@media (max-width: 992px) {
+  .order{
+    gap: 50px;
+    margin-top: 45px;
+    &_wrapper{
+      &_inf{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &_card{
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          &_block{
+            gap: 15px;
+            height: 190px;
+            span{
+              width: 90%;
+              text-align: center;
+              font-size: 16px;
+            }
+          }
+          &_list{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            li{
+              list-style-type: none;
+            }
+            li:before {
+              content: "- ";
+            }
+          }
+        }
+
+      }
+      &_text{
+        width: auto;
+        gap: 10px;
+        padding: 30px 20px;
+        span{
+          width: 100%;
+
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}

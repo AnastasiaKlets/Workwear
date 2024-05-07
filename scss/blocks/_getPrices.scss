@@ -1,0 +1,37 @@
+.getPrices{
+  &_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_img1{
+      position: relative;
+      left: 130px;
+    }
+    &_img2{
+      position: relative;
+      right: 130px;
+    }
+    &_textBtn{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 17px;
+      span{
+        text-align: center;
+        color: #484848;
+      }
+      &_btn{
+        width: 1113px;
+        height: 168px;
+        background: linear-gradient(360deg, rgba(217, 217, 217, 0) 0%, rgba(115, 115, 115, 0.32) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button{
+          width: 207px;
+        }
+      }
+    }
+  }
+}

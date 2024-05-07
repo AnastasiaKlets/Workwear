@@ -1,0 +1,122 @@
+@media (max-width:1720px) {
+  .catalog{
+    &_wrapper{
+      &_categories{
+        &_tab{
+          &_row{
+            width: calc(90% - 50px);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:1600px) {
+  .catalog{
+    &_wrapper{
+      &_categories{
+        &_tab{
+          &_row{
+            width: calc(90% - 50px);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:1440px) {
+  .catalog{
+    &_wrapper{
+      &_categories{
+        &_tab{
+          &_row{
+            width: calc(90% - 50px);
+          }
+        }
+        &_filters{
+          &_find{
+            form {
+              width: 500px;
+              height: 40px;
+            }
+            input.search {
+              width: 100%;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+  .catalog{
+    &_wrapper{
+      display: grid;
+      grid-template-columns: 100%;
+      justify-items: stretch;
+      justify-content: space-evenly;
+      &_sidebar{
+        justify-content: flex-start;
+        gap: 25px;
+      }
+      &_categories{
+        padding-top: 0;
+        &_tab{
+          margin-top:0;
+          &_content{
+            display: grid;
+            grid-template-columns: 45% 45%;
+            justify-items: center;
+            justify-content: space-between;
+          }
+          &_row{
+            width: 100%;
+          }
+        }
+        &_filters{
+          display: flex;
+          flex-direction: column;
+          &_find{
+            margin-bottom: 50px;
+            form {
+              width: 312px;
+              height: 48px;
+              display: flex;
+            }
+            input.search {
+              padding: 5px 5px 5px 40px;
+              width: 100%;
+              height: 48px;
+              background: url(../../icons/catalog/Button.svg) no-repeat 10px 15px;
+              background-size: auto 40%;
+              border: 1px solid #ccc;
+            }
+            input::placeholder{
+              font-family: Roboto-Regular, serif;
+              font-weight: 400;
+              font-size: 13px;
+              line-height: 1.1;
+              color: #111;
+            }
+          }
+          &_lists{
+            display: none;
+          }
+          &_type{
+            display:none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}

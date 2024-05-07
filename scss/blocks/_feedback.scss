@@ -1,0 +1,41 @@
+.feedback{
+  margin-top: 100px;
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 45% 55%;
+    justify-content: space-between;
+    align-items: center;
+    &_form{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      input{
+        border: 1px solid rgba(255, 255, 255, 0.73);
+        border-bottom: 1px solid #9d9d9d;
+        border-radius: 0;
+        width: 100%;
+      }
+      button{
+        margin-top: 10px;
+        width: 92%;
+      }
+    }
+    &_title{
+      font-weight: 500;
+      font-size: 128px;
+      line-height: 100%;
+      letter-spacing: -0.06em;
+      position: relative;
+      left:300px;
+      margin-top: 50px;
+      -webkit-text-stroke: 1px #484848;
+      color: transparent;
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
+.imgMob{
+  display: none;
+}

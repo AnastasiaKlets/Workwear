@@ -36,6 +36,42 @@ function tabs(tabsContainerSelector, tabsSelector, tabsContentSelector, tabsPare
 	});
 }
 
+
+function openModal(modalSelector) {
+    const modal = document.querySelector(modalSelector);
+    modal.classList.add('show');
+    modal.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modalSelector) {
+    const modal = document.querySelector(modalSelector);
+    modal.classList.add('hide');
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+function modal(triggerSelector, closeSelector, modalSelector) {
+    const modalTrigger = document.querySelectorAll(triggerSelector),
+        modal = document.querySelector(modalSelector);
+    modalTrigger.forEach(btn => {
+        btn.addEventListener('click', () => openModal(modalSelector));
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.getAttribute(closeSelector) == '') {
+            closeModal(modalSelector);
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && modal.classList.contains('show')) { 
+            closeModal(modalSelector);
+        }
+    });
+}
+
+
 function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideSelector, wrapperSelector, fieldSelector, indicatorsClass, elementsPerPage = 1, elementsPerPageMobile = 1, rowGap = 0, duration = 0, swipe = false}) {
     let slideIndex = 1,
     	offset = 0,
@@ -170,6 +206,11 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
 	function moveNext() {
+
+        if (!slideSelector.includes('assortment')) {
+            field.classList.add('trans-5')
+        }
+
         if (offset == deleteNotDigits(width) * (slides.length - 1)) {
 			offset = 0;
 		} else {
@@ -178,6 +219,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
 		if (slideIndex == slides.length) {
 			slideIndex = 1;
+
+            field.classList.remove('trans-5')
+
 		} else {
 			slideIndex++;
 		}
@@ -186,6 +230,11 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
     function movePrev() {
+
+        if (!slideSelector.includes('assortment')) {
+            field.classList.add('trans-5')
+        }
+
         if (offset == 0) {
 			offset = deleteNotDigits(width) * (slides.length - 1);
 		} else {
@@ -194,6 +243,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
 		if (slideIndex == 1) {
 			slideIndex = slides.length;
+
+            field.classList.remove('trans-5')
+
 		} else {
 			slideIndex--;
 		}
@@ -220,7 +272,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
                 slidesNew[index].firstElementChild.classList.add('absolute');
             }
         }
-        if (slideSelector.includes('monthly')) {
+
+        if (slideSelector.includes('monthly') || slideSelector.includes('assortment')) {
+
             slidesNew.forEach(slide => {
                 slide.classList.remove('main');
                 slide.lastElementChild.classList.remove('show');
@@ -386,9 +440,32 @@ if (document.querySelector('.monthly_field') != null) {
     });
 }
 
+if (document.querySelector('.assortment_field') != null) {
+    slider({
+        containerSelector: '.assortment_container',
+        slideSelector: '.assortment_slide',
+        nextSlideSelector: '.assortment_next',
+        prevSlideSelector: '.assortment_prev',
+        wrapperSelector: '.assortment_wrapper',
+        fieldSelector: '.assortment_field',
+        indicatorsClass: 'assortment_indicators',
+        elementsPerPage: 3,
+        elementsPerPageMobile: 2,
+        rowGap: 24,
+        swipe: true,
+    });
+}
+
 if (document.querySelector('.monthly_timer') != null) {
     timer('.monthly_timer', '2024-05-15');
 }
+
+
+if (document.querySelector('.consult') != null) {
+    modal('[data-modal]', 'data-close', '.consult');
+    modal('[data-thanks]', 'data-close', '.thanks');
+}
+
 
 const pageup = document.querySelector('.pageUp');
 window.addEventListener("scroll", (event) => {
@@ -399,3 +476,11 @@ window.addEventListener("scroll", (event) => {
         pageup.classList.remove('show');
     }
 });
+
+
+document.querySelector('.consult_form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    closeModal('.consult');
+    openModal('.thanks');
+});
+

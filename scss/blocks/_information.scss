@@ -1,0 +1,14 @@
+.information{
+  &_wrapper{
+    display: flex;
+    justify-content: center;
+    &_inf{
+      color: #484848;
+      border: 1px solid #000;
+      padding: 80px 150px;
+      margin: 50px;
+      width: 65%;
+      text-align: center;
+    }
+  }
+}

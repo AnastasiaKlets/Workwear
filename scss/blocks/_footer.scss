@@ -1,0 +1,40 @@
+.footer{
+  border-top: 1px solid #DEDFE1;
+  margin-bottom: 25px;
+  &_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    &_menu{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      &_nav{
+        margin: 0;
+      }
+    }
+    &_inf{
+      display: grid;
+      grid-template-columns: 60% 40%;
+      width: 100%;
+      justify-items: end;
+      align-items: end;
+      span{
+        color: #484848;
+      }
+      &_logoTarget{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        span{
+          font-size: 14px;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
