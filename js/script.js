@@ -36,6 +36,7 @@ function tabs(tabsContainerSelector, tabsSelector, tabsContentSelector, tabsPare
 	});
 }
 
+
 function openModal(modalSelector) {
     const modal = document.querySelector(modalSelector);
     modal.classList.add('show');
@@ -69,6 +70,7 @@ function modal(triggerSelector, closeSelector, modalSelector) {
         }
     });
 }
+
 
 function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideSelector, wrapperSelector, fieldSelector, indicatorsClass, elementsPerPage = 1, elementsPerPageMobile = 1, rowGap = 0, duration = 0, swipe = false}) {
     let slideIndex = 1,
@@ -204,9 +206,11 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
 	function moveNext() {
+
         if (!slideSelector.includes('assortment')) {
             field.classList.add('trans-5')
         }
+
         if (offset == deleteNotDigits(width) * (slides.length - 1)) {
 			offset = 0;
 		} else {
@@ -215,7 +219,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
 		if (slideIndex == slides.length) {
 			slideIndex = 1;
+
             field.classList.remove('trans-5')
+
 		} else {
 			slideIndex++;
 		}
@@ -224,9 +230,11 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
     function movePrev() {
+
         if (!slideSelector.includes('assortment')) {
             field.classList.add('trans-5')
         }
+
         if (offset == 0) {
 			offset = deleteNotDigits(width) * (slides.length - 1);
 		} else {
@@ -235,7 +243,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
 		if (slideIndex == 1) {
 			slideIndex = slides.length;
+
             field.classList.remove('trans-5')
+
 		} else {
 			slideIndex--;
 		}
@@ -262,7 +272,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
                 slidesNew[index].firstElementChild.classList.add('absolute');
             }
         }
+
         if (slideSelector.includes('monthly') || slideSelector.includes('assortment')) {
+
             slidesNew.forEach(slide => {
                 slide.classList.remove('main');
                 slide.lastElementChild.classList.remove('show');
@@ -427,6 +439,7 @@ if (document.querySelector('.monthly_field') != null) {
         swipe: true,
     });
 }
+
 if (document.querySelector('.assortment_field') != null) {
     slider({
         containerSelector: '.assortment_container',
@@ -447,10 +460,12 @@ if (document.querySelector('.monthly_timer') != null) {
     timer('.monthly_timer', '2024-05-15');
 }
 
+
 if (document.querySelector('.consult') != null) {
     modal('[data-modal]', 'data-close', '.consult');
     modal('[data-thanks]', 'data-close', '.thanks');
 }
+
 
 const pageup = document.querySelector('.pageUp');
 window.addEventListener("scroll", (event) => {
@@ -462,8 +477,10 @@ window.addEventListener("scroll", (event) => {
     }
 });
 
+
 document.querySelector('.consult_form').addEventListener('submit', (e) => {
     e.preventDefault();
     closeModal('.consult');
     openModal('.thanks');
 });
+

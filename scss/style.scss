@@ -49,6 +49,18 @@ a {
 }
 
 
+.pageUp {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 11px;
+  width: 57px;
+  height: 57px;
+  img {
+      width: 100%;
+  }
+}
+
 @import 'blocks/title';
 @import "blocks/button";
 @import "blocks/header";
@@ -56,6 +68,7 @@ a {
 @import "blocks/categories";
 @import "blocks/arrivals";
 @import "blocks/licenses";
+
 @import "blocks/consult";
 @import "blocks/sidebarAndBanner";
 @import "blocks/marquee";
@@ -72,3 +85,4 @@ a {
 @import "blocks/assortment";
 @import "blocks/feedback";
 @import 'media/general';
+

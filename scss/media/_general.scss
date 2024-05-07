@@ -4,6 +4,7 @@
 @import "categories";
 @import "arrivals";
 @import "licenses";
+
 @import "sidebarAndBanner";
 @import "marquee";
 @import "getPrices";
@@ -19,6 +20,7 @@
 @import "footer";
 @import "feedback";
 @import "consult";
+
 .hide {
 	display: none;
 }
@@ -38,5 +40,6 @@
     .pageUp {
       width: 37px;
       height: 37px;
+
     }
 }
