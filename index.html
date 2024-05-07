@@ -37,7 +37,7 @@
                             <img src="icons/whatsapp.png" alt="whatsapp">
                         </div>
                     </div>
-                    <button class="button button_header title">
+                    <button data-modal class="button button_header title">
                         Получить прайс
                     </button>
                 </div>
@@ -128,7 +128,7 @@
                         <br>
                         Сб-Вс: Выходной
                     </div>
-                    <button class="button button_header title">
+                    <button data-modal class="button button_header title">
                         Получить прайс
                     </button>
                 </div>
@@ -214,7 +214,7 @@
                             <span class="title sidebarAndBanner_wrapper_banner_example_text_NEW">
                                 NEW COLLECTION
                             </span>
-                            <button class="button sidebarAndBanner_wrapper_banner_example_text_btn title">
+                            <button data-modal class="button sidebarAndBanner_wrapper_banner_example_text_btn title">
                                 Получить прайс
                             </button>
                         </div>
@@ -222,7 +222,7 @@
                     </div>
                     <img src="img/sidebarAndBanner/example1.png" alt="example" class="sidebarAndBanner_wrapper_banner_exampleimg2">
                 </div>
-                <button class="button sidebarAndBanner_wrapper_banner_example_text_btnDop title">
+                <button data-modal class="button sidebarAndBanner_wrapper_banner_example_text_btnDop title">
                     Получить прайс
                 </button>
             </div>
@@ -334,7 +334,37 @@
             </div>
         </div>
     </section>
-
+    <section class="feedback">
+        <div class="container">
+            <div class="feedback_wrapper">
+                <div class="feedback_wrapper_form">
+                <span class="title title_46 bold">
+                    <b>Форма обратной связи</b>
+                </span>
+                    <span class="title">
+                    Мы свяжемся с Вами в ближайшее время
+                </span>
+                    <form class="contact_wrapper_inf_inputs_form feedback_wrapper_form">
+                        <div class="contact_wrapper_inf_inputs_form_inf">
+                            <input type="text" name="name" placeholder="Введите имя" class="contact_wrapper_inf_inputs_form_inf_input" required>
+                        </div>
+                        <div class="contact_wrapper_inf_inputs_form_inf">
+                            <input type="text" name="phone" placeholder="Номер телефона" class="contact_wrapper_inf_inputs_form_inf_input" required>
+                        </div>
+                        <div class="contact_wrapper_inf_inputs_form_inf">
+                            <input type="text" name="message" placeholder="Введите текст" class="contact_wrapper_inf_inputs_form_inf_input" required >
+                        </div>
+                        <button type="submit" class="button">Отправить</button>
+                    </form>
+                    <span class="feedback_wrapper_title title_128">
+                    MARGUN
+                </span>
+                </div>
+                <img src="img/feedback/image.png" alt="" class="imgDes">
+                <img src="img/feedback/imageMob.png" alt="" class="imgMob">
+            </div>
+        </div>
+    </section>
     <section class="categories">
         <div class="container">
             <div class="title title_46">Категории</div>
@@ -375,7 +405,7 @@
                                 </div>
                             </div>
                             <div class="categories_tab_row_button">
-                                <button data-modal class="button">Заказать</button>
+                                <button data-modal  class="button">Заказать</button>
                             </div>
                         </div>
                         <div class="categories_tab_row">
@@ -699,7 +729,7 @@
                         изготовлена из <b>100%</b> хлопка
                     </span>
                     <div class="getPrices_wrapper_textBtn_btn">
-                        <button class="button">
+                        <button  data-modal class="button">
                             Получить прайс
                         </button>
                     </div>
@@ -786,6 +816,20 @@
                         </div>
                         <button type="submit" class="button">Оставить заявку</button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thanks">
+        <div class="thanks_modal">
+            <div class="thanks_wrapper">
+                <div class="thanks_close"><img data-close src="icons/close.svg" alt="close"></div>
+                <div class="thanks_content">
+                    <div class="thanks_content_image">
+                        <img src="icons/MARGUN - Logo 1.svg" alt="logo">
+                    </div>
+                    <div class="title title_46">Ваша заявка принята!</div>
+                    <div class="title title_32">Cпасибо! Мы обязательно свяжемся с Вами в ближайшее время по указанным контактам.</div>
                 </div>
             </div>
         </div>

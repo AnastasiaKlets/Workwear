@@ -37,7 +37,7 @@
                         <img src="icons/whatsapp.png" alt="whatsapp">
                     </div>
                 </div>
-                <button class="button button_header title">
+                <button data-modal class="button button_header title">
                     Получить прайс
                 </button>
             </div>
@@ -128,17 +128,15 @@
                     <br>
                     Сб-Вс: Выходной
                 </div>
-                <button class="button button_header title">
+                <button data-modal class="button button_header title">
                     Получить прайс
                 </button>
             </div>
         </div>
     </div>
 </header>
-
 <section class="sidebarAndBanner catalog">
     <div class="container">
-
         <div class="sidebarAndBanner_wrapper catalog_wrapper">
             <div class="sidebarAndBanner_wrapper_sidebar catalog_wrapper_sidebar">
                 <div class="sidebarAndBanner_wrapper_sidebar_category">
@@ -210,12 +208,6 @@
                         </form>
                     </div>
                     <div class="catalog_wrapper_categories_filters_lists">
-                            <select>
-                                <option>Москва</option>
-                                <option>Минск</option>
-                                <option>Киев</option>
-                                <option>Лондон</option>
-                            </select>
                         <select>
                             <option>Москва</option>
                             <option>Минск</option>
@@ -234,6 +226,24 @@
                             <option>Киев</option>
                             <option>Лондон</option>
                         </select>
+                        <select>
+                            <option>Москва</option>
+                            <option>Минск</option>
+                            <option>Киев</option>
+                            <option>Лондон</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div>
+                            <span>Сортировать по:</span>
+                            <span>популярности</span>
+                            <span>цене ↓</span>
+                        </div>
+                        <div>
+                            <span>Отображать:</span>
+                            <span>все товары</span>
+                            <span>распродажа</span>
+                        </div>
                     </div>
                 </div>
                 <div class="categories_tab catalog_wrapper_categories_tab">

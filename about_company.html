@@ -37,7 +37,7 @@
                         <img src="icons/whatsapp.png" alt="whatsapp">
                     </div>
                 </div>
-                <button class="button button_header title">
+                <button data-modal class="button button_header title">
                     Получить прайс
                 </button>
             </div>
@@ -128,7 +128,7 @@
                     <br>
                     Сб-Вс: Выходной
                 </div>
-                <button class="button button_header title">
+                <button data-modal class="button button_header title">
                     Получить прайс
                 </button>
             </div>
@@ -164,7 +164,43 @@
         </div>
     </div>
 </section>
-
+<section class="assortment">
+    <div class="container">
+        <div class="assortment_content">
+            <div class="title title_32 bold">Ассортимент выпускаемой продукции:</div>
+            <div class="title title_20">- термобелье, тельняшки, майки, футболки</div>
+            <div class="title title_20">- камуфлированная продукция</div>
+            <div class="title title_20">- подшлемники, балаклавы</div>
+            <div class="title title_20">- свитера, джемпера, лонгсливы</div>
+        </div>
+        <div class="assortment_container">
+            <div class="assortment_wrapper">
+                <div class="assortment_field">
+                    <div class="assortment_slide">
+                        <img src="img/assortment/assortment_1.png" alt="assortment">
+                    </div>
+                    <div class="assortment_slide">
+                        <img src="img/assortment/assortment_2.png" alt="assortment">
+                    </div>
+                    <div class="assortment_slide">
+                        <img src="img/assortment/assortment_3.png" alt="assortment">
+                    </div>
+                    <div class="assortment_slide">
+                        <img src="img/assortment/assortment_1.png" alt="assortment">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="assortment_controls">
+            <div class="assortment_prev">
+                <img class="rotate" src="icons/button_arrow.svg" alt="prev">
+            </div>
+            <div class="assortment_next">
+                <img src="icons/button_arrow.svg" alt="next">
+            </div>
+        </div>
+    </div>
+</section>
 <section class="textInf">
     <div class="container">
         <div class="textInf_wrapper">
@@ -219,6 +255,36 @@
         </div>
     </div>
 </section>
+<section class="feedback">
+    <div class="container">
+        <div class="feedback_wrapper">
+            <div class="feedback_wrapper_form">
+                <span class="title title_46 bold">
+                    <b>Форма обратной связи</b>
+                </span>
+                <span class="title">
+                    Мы свяжемся с Вами в ближайшее время
+                </span>
+                <form class="contact_wrapper_inf_inputs_form feedback_wrapper_form">
+                    <div class="contact_wrapper_inf_inputs_form_inf">
+                        <input type="text" name="name" placeholder="Введите имя" class="contact_wrapper_inf_inputs_form_inf_input" required>
+                    </div>
+                    <div class="contact_wrapper_inf_inputs_form_inf">
+                        <input type="text" name="phone" placeholder="Номер телефона" class="contact_wrapper_inf_inputs_form_inf_input" required>
+                    </div>
+                    <div class="contact_wrapper_inf_inputs_form_inf">
+                        <input type="text" name="message" placeholder="Введите текст" class="contact_wrapper_inf_inputs_form_inf_input" required >
+                    </div>
+                    <button type="submit" class="button">Отправить</button>
+                </form>
+                <span class="feedback_wrapper_title title_128">
+                    MARGUN
+                </span>
+            </div>
+            <img src="img/feedback/image.png" alt="">
+        </div>
+    </div>
+</section>
 <section class="getPrices">
     <div class="container">
         <div class="getPrices_wrapper">
@@ -230,7 +296,7 @@
                         изготовлена из <b>100%</b> хлопка
                     </span>
                 <div class="getPrices_wrapper_textBtn_btn">
-                    <button class="button">
+                    <button data-modal class="button">
                         Получить прайс
                     </button>
                 </div>

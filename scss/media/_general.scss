@@ -15,8 +15,10 @@
 @import "contact";
 @import "catalog";
 @import "order";
+@import "assortment";
 @import "footer";
-
+@import "feedback";
+@import "consult";
 .hide {
 	display: none;
 }
@@ -26,7 +28,9 @@
 .flex {
 	display: flex;
 }
-
+.trans-5 {
+  transition: 0.5s all;
+}
 @media (max-width: 768px) {
     .container {
         width: 86.94%;

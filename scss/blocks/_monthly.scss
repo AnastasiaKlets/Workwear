@@ -1,5 +1,5 @@
 .monthly {
-    margin-top: 120px;
+    padding-top: 120px;
     background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
     &_wrapper-main {
         display: flex;
@@ -31,7 +31,6 @@
     }
     &_field {
         display: flex;
-        transition: 0.2s all;
     }
     &_slide {
         position: relative;
