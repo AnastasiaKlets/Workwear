@@ -311,6 +311,13 @@
   .header_wrapper_content_timeWork{
     width: 100%;
   }
+  .headerMob{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: 10px;
+
+  }
 }
 @media (max-width: 768px) {
 
