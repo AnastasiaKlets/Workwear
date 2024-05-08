@@ -1,9 +1,9 @@
 function tabs(tabsContainerSelector, tabsSelector, tabsContentSelector, tabsParentSelector, activeClass) {
     let tabs = document.querySelectorAll(`${tabsContainerSelector} ${tabsSelector}`),
-		tabsContent = document.querySelectorAll(`${tabsContainerSelector} ${tabsContentSelector}`),
-		tabsParent = document.querySelector(`${tabsContainerSelector} ${tabsParentSelector}`);
+        tabsContent = document.querySelectorAll(`${tabsContainerSelector} ${tabsContentSelector}`),
+        tabsParent = document.querySelector(`${tabsContainerSelector} ${tabsParentSelector}`);
 
-	function hideTabContent() {
+    function hideTabContent() {
         tabsContent.forEach(item => {
             item.classList.add('hide');
             item.classList.remove('flex', 'fade');
@@ -12,30 +12,29 @@ function tabs(tabsContainerSelector, tabsSelector, tabsContentSelector, tabsPare
         tabs.forEach(item => {
             item.classList.remove(activeClass);
         });
-	}
+    }
 
-	function showTabContent(i = 0) {
+    function showTabContent(i = 0) {
         tabsContent[i].classList.add('flex', 'fade');
         tabsContent[i].classList.remove('hide');
         tabs[i].classList.add(activeClass);
     }
-    
+
     hideTabContent();
     showTabContent();
 
-	tabsParent.addEventListener('click', function(event) {
-		const target = event.target;
-		if(target && target.classList.contains(tabsSelector.slice(1))) {
+    tabsParent.addEventListener('click', function(event) {
+        const target = event.target;
+        if(target && target.classList.contains(tabsSelector.slice(1))) {
             tabs.forEach((item, i) => {
                 if (target == item) {
                     hideTabContent();
                     showTabContent(i);
                 }
             });
-		}
-	});
+        }
+    });
 }
-
 
 function openModal(modalSelector) {
     const modal = document.querySelector(modalSelector);
@@ -65,25 +64,24 @@ function modal(triggerSelector, closeSelector, modalSelector) {
     });
 
     document.addEventListener('keydown', (e) => {
-        if (e.code === "Escape" && modal.classList.contains('show')) { 
+        if (e.code === "Escape" && modal.classList.contains('show')) {
             closeModal(modalSelector);
         }
     });
 }
 
-
 function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideSelector, wrapperSelector, fieldSelector, indicatorsClass, elementsPerPage = 1, elementsPerPageMobile = 1, rowGap = 0, duration = 0, swipe = false}) {
     let slideIndex = 1,
-    	offset = 0,
-		timer = 0,
+        offset = 0,
+        timer = 0,
         perPage = 1,
-		mobile = window.matchMedia('(max-width: 992px)').matches,
+        mobile = window.matchMedia('(max-width: 992px)').matches,
         templates = [],
         mainClass,
         slidesNew,
-		dots = [];
+        dots = [];
     const slides = document.querySelectorAll(slideSelector),
-		container = document.querySelector(containerSelector),
+        container = document.querySelector(containerSelector),
         prev = document.querySelector(prevSlideSelector),
         next = document.querySelector(nextSlideSelector),
         wrapper = document.querySelector(wrapperSelector),
@@ -95,12 +93,12 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
     let baseSlides = slides;
     mobile ? perPage = elementsPerPageMobile : perPage = elementsPerPage;
-	let width = Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width)) / perPage + 'px';
+    let width = Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width)) / perPage + 'px';
 
     field.style.width = 100 * (slides.length + perPage - 1) / perPage + "%";
 
     slides.forEach((slide, index) => {
-		slide.style.width = width;
+        slide.style.width = width;
         if (index != 0) {
             if (mobile) {
                 slide.style.paddingLeft = rowGap / 2 + 'px';
@@ -109,7 +107,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             }
         }
         templates[index] = slide;
-	});
+    });
 
     for (let i = 0; i < (perPage - 1); i++) {
         if (slideSelector.includes('licenses')) {
@@ -134,7 +132,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             dot.classList.add(`${mainClass}_dot`);
             if (i == 0) {
                 dot.classList.add(`${mainClass}_active`);
-            } 
+            }
             indicators.append(dot);
             dots.push(dot);
         }
@@ -151,9 +149,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         });
     }
 
-	makeTimer(duration);
+    makeTimer(duration);
 
-	window.addEventListener('resize', (e) => {
+    window.addEventListener('resize', (e) => {
         mobile = window.matchMedia('(max-width: 992px)').matches;
         mobile ? perPage = elementsPerPageMobile : perPage = elementsPerPage;
         width = Math.floor(deleteNotDigits(window.getComputedStyle(wrapper).width) / perPage) + 'px'
@@ -177,19 +175,19 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
                 }
             }
         });
-        
+
         if (indicatorsClass) {
             let dots = document.querySelectorAll(`.${mainClass}_dot`);
             dots.forEach((dot) => {
                 mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
             });
         }
-		
+
         slideIndex = 1,
-        offset = 0,
-        changeLicensesSlide(slideIndex);
+            offset = 0,
+            changeLicensesSlide(slideIndex);
         changeActivity();
-    }); 
+    });
 
     if (nextSlideSelector) {
         next.addEventListener("click", () => {
@@ -205,55 +203,59 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         });
     }
 
-	function moveNext() {
-
+    function moveNext() {
         if (!slideSelector.includes('assortment')) {
             field.classList.add('trans-5')
         }
-
+        if (slideSelector.includes('licenses')) {
+            field.classList.add('trans-30')
+        }
         if (offset == deleteNotDigits(width) * (slides.length - 1)) {
-			offset = 0;
-		} else {
-			offset += deleteNotDigits(width);
-		}
+            offset = 0;
+        } else {
+            offset += deleteNotDigits(width);
+        }
 
-		if (slideIndex == slides.length) {
-			slideIndex = 1;
-
+        if (slideIndex == slides.length) {
+            slideIndex = 1;
             field.classList.remove('trans-5')
-
-		} else {
-			slideIndex++;
-		}
+            if (slideSelector.includes('licenses')) {
+                field.classList.remove('trans-30')
+            }
+        } else {
+            slideIndex++;
+        }
         changeLicensesSlide(slideIndex);
-		changeActivity();
+        changeActivity();
     }
 
     function movePrev() {
-
         if (!slideSelector.includes('assortment')) {
             field.classList.add('trans-5')
         }
-
+        if (slideSelector.includes('licenses')) {
+            field.classList.add('trans-30')
+        }
         if (offset == 0) {
-			offset = deleteNotDigits(width) * (slides.length - 1);
-		} else {
-			offset -= deleteNotDigits(width);
-		}
+            offset = deleteNotDigits(width) * (slides.length - 1);
+        } else {
+            offset -= deleteNotDigits(width);
+        }
 
-		if (slideIndex == 1) {
-			slideIndex = slides.length;
-
+        if (slideIndex == 1) {
+            slideIndex = slides.length;
             field.classList.remove('trans-5')
-
-		} else {
-			slideIndex--;
-		}
+            if (slideSelector.includes('licenses')) {
+                field.classList.remove('trans-30')
+            }
+        } else {
+            slideIndex--;
+        }
         changeLicensesSlide(slideIndex);
-		changeActivity();
+        changeActivity();
     }
 
-	function changeActivity() {
+    function changeActivity() {
         field.style.transform = `translateX(-${offset}px)`;
         if (indicatorsClass) {
             dots.forEach(dot => dot.classList.remove(`${mainClass}_active`));
@@ -272,9 +274,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
                 slidesNew[index].firstElementChild.classList.add('absolute');
             }
         }
-
         if (slideSelector.includes('monthly') || slideSelector.includes('assortment')) {
-
             slidesNew.forEach(slide => {
                 slide.classList.remove('main');
                 slide.lastElementChild.classList.remove('show');
@@ -284,7 +284,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         }
     }
 
-	function makeTimer(duration){
+    function makeTimer(duration){
         if (duration == 0) {
             return;
         }
@@ -301,14 +301,14 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         let endX;
 
         const start = (e) => {
-            startX = e.pageX || e.touches[0].pageX;	
+            startX = e.pageX || e.touches[0].pageX;
         }
 
         const end = () => {
             if (endX < startX) {
                 moveNext();
                 makeTimer(duration);
-            }  
+            }
             if (endX > startX) {
                 movePrev();
                 makeTimer(duration);
@@ -352,9 +352,9 @@ function timer(id, deadline) {
             'seconds': seconds
         };
     }
-    
+
     function getZero(num){
-        if (num >= 0 && num < 10) { 
+        if (num >= 0 && num < 10) {
             return '0' + num;
         } else {
             return num;
@@ -404,7 +404,7 @@ if (document.querySelector('.arrivals_field') != null) {
         indicatorsClass: 'arrivals_indicators',
         elementsPerPage: 4,
         elementsPerPageMobile: 2,
-        duration: 3000,
+        duration: 6000,
         swipe: true,
     });
 }
@@ -439,7 +439,6 @@ if (document.querySelector('.monthly_field') != null) {
         swipe: true,
     });
 }
-
 if (document.querySelector('.assortment_field') != null) {
     slider({
         containerSelector: '.assortment_container',
@@ -460,27 +459,23 @@ if (document.querySelector('.monthly_timer') != null) {
     timer('.monthly_timer', '2024-05-15');
 }
 
-
 if (document.querySelector('.consult') != null) {
     modal('[data-modal]', 'data-close', '.consult');
     modal('[data-thanks]', 'data-close', '.thanks');
 }
 
-
 const pageup = document.querySelector('.pageUp');
 window.addEventListener("scroll", (event) => {
     if (window.scrollY > 1000) {
         pageup.classList.add('show');
-    } 
+    }
     else {
         pageup.classList.remove('show');
     }
 });
-
 
 document.querySelector('.consult_form').addEventListener('submit', (e) => {
     e.preventDefault();
     closeModal('.consult');
     openModal('.thanks');
 });
-
