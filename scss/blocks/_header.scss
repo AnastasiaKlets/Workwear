@@ -37,12 +37,14 @@
           justify-content: center;
 
           img{
-            width: 100%;
+            width: 75%;
             filter: grayscale(100%);
+            transition: 0.5s;
           }
 
           img:hover {
             filter: grayscale(0%);
+            transition: 0.5s;
           }
         }
       }

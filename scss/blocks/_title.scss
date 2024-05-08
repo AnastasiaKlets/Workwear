@@ -62,3 +62,12 @@
 .volkhov{
     font-family: "Volkhov", sans-serif;
 }
+
+.titleHover{
+    text-decoration:none;
+    transition: 0.5s;
+}
+.titleHover:hover{
+    color: #ff4646;
+    transition: 0.5s;
+}
