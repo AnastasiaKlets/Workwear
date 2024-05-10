@@ -14,13 +14,11 @@
         gap: 60px;
         &_div{
           width: 50px;
+          display: flex;
+          justify-content: center;
         }
         &_title{
           text-decoration:none;
-          transition: 0.5s;
-        }
-        &_title:hover{
-          color: #ff4646;
           transition: 0.5s;
         }
       }
@@ -79,3 +77,11 @@
 }
 }
 
+.sidebarAndBanner_wrapper_sidebar_category:hover .sidebarAndBanner_wrapper_sidebar_category_title{
+    color: #ff4646;
+    transition: 0.5s;
+}
+.sidebarAndBanner_wrapper_sidebar_category:hover .sidebarAndBanner_wrapper_sidebar_category_div{
+  filter: sepia(1) saturate(10000%) hue-rotate(18deg);
+  transition: 0.5s;
+}

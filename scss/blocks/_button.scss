@@ -14,13 +14,16 @@
     font-size: 20px;
     line-height: 100%;
     color: #fff;
-    transition: 1s;
     &_header {
         width: 277px;
         background: #000;
     }
 }
 .button:hover{
+    box-shadow:  0 21px 35px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+.buttonShadow:hover{
     box-shadow:  0 21px 35px 0 rgba(0, 0, 0, 0.3);
     transition: 0.5s;
 }
