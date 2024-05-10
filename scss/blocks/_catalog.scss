@@ -15,8 +15,9 @@
         &_content{
           display: grid;
           grid-template-columns: 33.33% 33.33% 33.33%;
-          gap: 36px 0;
+          gap: 70px 0;
           justify-items: start;
+          margin-bottom: 80px;
         }
         &_row{
           width: calc(90% - 50px);
