@@ -393,6 +393,7 @@ if (document.querySelector('.categories_tab') != null) {
 if (document.querySelector('.categories_tab_row_image') != null) {
     tabs('.categories_tab_row_image.subtab_1', '.categories_subtab_item', '.categories_subtab_content', '.categories_subtab_header', 'categories_subtab_active');
     tabs('.categories_tab_row_image.subtab_2', '.categories_subtab_item', '.categories_subtab_content', '.categories_subtab_header', 'categories_subtab_active');
+    tabs('.categories_tab_row_image.subtab_3', '.categories_subtab_item', '.categories_subtab_content', '.categories_subtab_header', 'categories_subtab_active');
 }
 
 if (document.querySelector('.arrivals_field') != null) {
