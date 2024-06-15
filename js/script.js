@@ -389,9 +389,11 @@ function timer(id, deadline) {
 
 if (document.querySelector('.categories_tab_row_image') != null) {
     let cards = document.querySelectorAll('.categories_tab_row_image');
+    console.log(cards)
     cards.forEach((card, index) => {
         tabs(`.categories_tab_row_image.subtab_${index + 1}`, '.categories_subtab_item', '.categories_subtab_content', '.categories_subtab_header', 'categories_subtab_active');
     });
+
 }
 
 if (document.querySelector('.arrivals_field') != null) {
